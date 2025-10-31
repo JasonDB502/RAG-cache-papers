@@ -11,7 +11,7 @@ RAG Semantic Cache Papers
   - 高效知识缓存：为了解决长序列生成问题和LLM对文档顺序的敏感性，RAGCache引入了知识树（knowledge tree）结构来组织和缓存检索文档的中间状态。知识树是一个基于文档ID的前缀树，每个节点存储文档KV cache的元数据（如内存页索引）。它将KV cache分布在GPU和主机内存层级中：频繁访问的节点存储在快速的GPU内存中，而访问较少的节点则置于较慢的主机内存。为了有效地管理这个多级缓存，RAGCache设计了前缀感知型贪婪双尺寸频率（Prefix-aware Greedy-Dual-Size-Frequency, PGDSF）替换策略。
   - 动态推测性流水线（Dynamic Speculative Pipelining）：为了消除检索与生成之间的数据依赖，RAGCache利用向量搜索的流式特性，实现了动态推测性流水线。它将向量搜索过程划分为多个阶段：在每个阶段结束时，RAGCache将临时的top-k文档发送给LLM推理引擎进行推测性生成。如果新的临时结果与上一次的不同，LLM会终止先前的推测并启动新的生成；如果相同，则继续当前生成。当最终的top-k文档确定并与最新的推测性生成匹配时，直接返回结果；否则进行重新生成。
 - 测试基准：RAGCache在vLLM和Faiss基础上实现了一个原型系统，并在开源数据集（MMLU、Natural Questions）和生产数据集（Dataset-X）上进行了评估
-2. Shai Aviram Bergman, Zhang Ji, Anne-Marie Kermarrec, Diana Petrescu, Rafael Pires, Mathis Randl, and Martijn de Vos. 2025. Leveraging Approximate Caching for Faster Retrieval-Augmented Generation. EuroMLSys'25
+2. **[Proximity]** Shai Aviram Bergman, Zhang Ji, Anne-Marie Kermarrec, Diana Petrescu, Rafael Pires, Mathis Randl, and Martijn de Vos. 2025. [Leveraging Approximate Caching for Faster Retrieval-Augmented Generation](https://arxiv.org/pdf/2503.05530). EuroMLSys'25. [**Github链接**](https://github.com/sacs-epfl/instruct-qa-proximity)
 - 该论文提出一种名为 Proximity 的近似键值缓存系统，核心思想是：
   - 相似查询复用：当用户查询相似时，复用之前检索的文档，减少重复访问向量数据库。
   - 近似缓存机制：构建一个基于查询相似度的缓存系统，而非精确匹配。
