@@ -3,7 +3,7 @@ RAG Semantic Cache Papers
 
 ## 论文
 
-1. **[RAGCache]** Chao Jin, Zili Zhang, Xuanlin Jiang, Fangyue Liu, Xin Liu, Xuanzhe Liu, Xin Jin: RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation. ACM Transactions on Computer Systems, online September (2025) 
+1. **[RAGCache]** Chao Jin, Zili Zhang, Xuanlin Jiang, Fangyue Liu, Xin Liu, Xuanzhe Liu, Xin Jin: [RAGCache: Efficient Knowledge Caching for Retrieval-Augmented Generation](https://arxiv.org/pdf/2404.12457). ACM Transactions on Computer Systems, online September (2025) 
 - 该论文发现RAG存在两个主要的优化机会：
   - 知识重用模式：RAG请求中常出现相同的文档，且少量文档占据了大多数检索，这表明可以通过缓存频繁访问文档的中间状态（即key-value tensors）来减少重复计算。
   - 流式搜索行为：向量搜索算法在搜索过程中会持续更新top-k候选结果，最终的top-k文档往往在搜索过程的早期就已经确定，这为检索与LLM生成之间的重叠执行提供了可能。
