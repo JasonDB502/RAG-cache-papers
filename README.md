@@ -17,8 +17,9 @@ RAG Semantic Cache Papers
   - 近似缓存机制：构建一个基于查询相似度的缓存系统，而非精确匹配。
   - 性能权衡分析：通过调整相似度阈值，在速度与召回率之间取得平衡。
 - 测试基准：MMLU和MedRAG
-3.  **[Cache-Craft]** Shubham Agarwal, Sai Sundaresan, Subrata Mitra, Debabrata Mahapatra, Archit Gupta, Rounak Sharma, Nirmal Joshua Kapu, Tong Yu, Shiv Kumar Saini: [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](https://arxiv.org/pdf/2502.15734). Proc. ACM Manag. Data 3(3): 136:1-136:28 (2025)
-4. 	Brian J. Chan, Chao-Ting Chen, Jui-Hung Cheng, Hen-Hsen Huang: [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605). WWW (Companion Volume) 2025: 893-897
+3. **[Cache-Craft]** Shubham Agarwal, Sai Sundaresan, Subrata Mitra, Debabrata Mahapatra, Archit Gupta, Rounak Sharma, Nirmal Joshua Kapu, Tong Yu, Shiv Kumar Saini: [Cache-Craft: Managing Chunk-Caches for Efficient Retrieval-Augmented Generation](https://arxiv.org/pdf/2502.15734). Proc. ACM Manag. Data 3(3): 136:1-136:28 (2025)
+4. Brian J. Chan, Chao-Ting Chen, Jui-Hung Cheng, Hen-Hsen Huang: [Don't Do RAG: When Cache-Augmented Generation is All You Need for Knowledge Tasks](https://arxiv.org/pdf/2412.15605). WWW (Companion Volume) 2025: 893-897
+5. Shuhang Lin, Zhencan Peng, Lingyao Li, Xiao Lin, Xi Zhu, Yongfeng Zhang: [Cache Mechanism for Agent RAG Systems](https://arxiv.org/pdf/2511.02919), 	arXiv:2511.02919
 
 ## 测试基准
   - MMLU（Massive Multitask Language Understanding）是一个多任务语言理解评估基准，涵盖 57 个学科的多项选择题评估基准，用于测试语言模型在广泛知识领域的理解和推理能力。约 15,000 道题目，覆盖历史、法律、数学、医学等领域。广泛用于评估 GPT、Claude、LLaMA 等主流模型的综合能力。🔗 [MMLU 中文介绍与排行榜](https://www.datalearner.com/benchmarks/mmlu)（DataLearner） 🔗 [MMLU 英文维基百科](https://en.wikipedia.org/wiki/MMLU) 🔗 [MMLU 原始论文与 GitHub](https://zhuanlan.zhihu.com/p/677583745)
